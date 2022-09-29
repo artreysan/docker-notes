@@ -105,10 +105,22 @@ docker rm $(docker ps -aq)
 ```
 docker run -p <externalPort>:<internalPort> <ContainerName>
 ```
+
+### Instance more that one container with diferent port
+```
+docker run -p <EP1>:<IP1> -p <EP1>:<IP1> -p <EP1>:<IP1> ... -d <ContainerName>
+```
+Example:
+```
+docker run -p 5000:80 -p 4000:80 -p 3333:80 -p 1020:80 -d nginx 
+```
+
 ## Run container internally or background with detach (-d)
 ```
 docker run -p <externalPort>:<internalPort> -d <ContainerName>
 ```
+
+
 
 
 
